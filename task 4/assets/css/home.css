@@ -1,0 +1,134 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #6e7dff, #0e3d6c); /* Gradient background */
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Full screen height */
+}
+
+/* Header Styling */
+header {
+    background-color: #111;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+    background-color: #4e9af1;
+    border-radius: 5px;
+}
+
+/* About Section */
+#about {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 50px 30px;
+    margin: 50px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    margin-top: auto;  /* Push footer to the bottom */
+}
+
+footer p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
