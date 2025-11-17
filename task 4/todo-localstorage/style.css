@@ -1,0 +1,125 @@
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* To-Do List container */
+.todo-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Input Field */
+input {
+  padding: 12px;
+  width: 80%;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Add Task Button */
+button {
+  padding: 15px;
+  width: 80%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Task List Item */
+li {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  overflow: hidden; /* Prevents overflow from the list items */
+  text-overflow: ellipsis; /* Adds ... if text overflows */
+  white-space: normal; /* Allows text to wrap across multiple lines */
+  word-wrap: break-word; /* Breaks long words */
+  word-break: break-word; /* Ensures that words can break if too long */
+}
+
+/* For long task names, allow breaking them into multiple lines */
+li span {
+  word-wrap: break-word;
+  word-break: break-word;
+  flex-grow: 1; /* Ensures the task name takes up remaining space */
+}
+
+/* Delete Button on Task */
+li button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+/* Make everything responsive */
+@media (max-width: 480px) {
+  .todo-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input, button {
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    font-size: 14px;
+  }
+}
